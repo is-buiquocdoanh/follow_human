@@ -36,12 +36,21 @@ def generate_launch_description():
             )
         )
     )
+    
+    # Khởi chạy convert compressed.launch.py để chuyển ảnh nén sang ảnh thô
+    robot_convert_compressed = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('robot_camera'),
+                'launch',
+                'convert_compressed.launch.py'
+            )
+        )
+    )
 
     return LaunchDescription([
         robot_description_launch,
         robot_joy,
         robot_kinematic,
+        robot_convert_compressed,
     ])
-
- # save map
-    #ros2 run nav2_map_server map_saver_cli -f map

@@ -29,8 +29,5 @@ def generate_launch_description():
 
     return LaunchDescription([
         diff_driver,
-        ylidar_launch,
+        # ylidar_launch,
     ])
-
- # save map
-    #ros2 run nav2_map_server map_saver_cli -f map
