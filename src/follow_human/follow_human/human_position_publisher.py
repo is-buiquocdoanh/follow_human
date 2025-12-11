@@ -34,7 +34,9 @@ class HumanPositionPublisher(Node):
 
     def image_callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
-        results = self.model(frame)
+        # results = self.model(frame)
+        results = self.model(frame, imgsz=352)
+
 
         human_array_msg = HumanPositionArray()
 

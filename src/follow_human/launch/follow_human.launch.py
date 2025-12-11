@@ -32,5 +32,5 @@ def generate_launch_description():
     return LaunchDescription([
         human_position_publisher_node,
         follow_human_node,
-        rviz_node
+        # rviz_node
     ])
